@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% from 'components/card.html' import card %} {% block
+content %}
+    <div class="flex flex-col gap-4">
+        <div>
+            <h1 class="font-semibold">Academia PowerOn</h1>
+            <p class="text-secondary">
+                Gestão de alunos, professores, modalidades e matrículas.
+            </p>
+        </div>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(264px,1fr))] gap-2">
+            {{ card(0, 'Alunos') }}
+            {{ card(0, 'Turmas/Modalidades') }}
+            {{ card(0,'Matrículas') }}
+            {{ card(0, 'Vagas Livres') }}
+        </div>
+    </div>
+
+{% endblock %}
