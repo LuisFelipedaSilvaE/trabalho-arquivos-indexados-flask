@@ -1,0 +1,26 @@
+<nav class="navbar bg-body-tertiary justify-center! px-4">
+    <div class="flex gap-4 justify-between items-center max-w-7xl w-full">
+        <div class="flex gap-2 items-center justify-center">
+            <i class="bi bi-lightning-fill text-primary text-xl"></i>
+            <span
+                    class="tracking-wide font-semibold text-xl"
+                    style="
+          font-family:
+            Barlow Condensed,
+            sans-serif;
+        "
+            >
+        PowerOn
+      </span>
+        </div>
+        <ul class="nav nav-pills">
+            {% for link in header_links %}
+                <li class="nav-item">
+                    <a class="nav-link {{ 'bg-primary-subtle text-primary font-semibold!' if link.get('active') else 'text-secondary' }}"
+                       aria-current="page"
+                       href="{{ link.get('url') }}">{{ link.get('label') }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
