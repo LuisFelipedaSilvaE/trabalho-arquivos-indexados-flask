@@ -1,0 +1,8 @@
+{% macro card(title, subtitle, sub_pos='bottom', theme='text-background-light') %}
+    <div class="card border {{ theme }}">
+        <div class="card-body flex! flex-col!">
+            <h5 class="card-title text-2xl! {{ 'order-1' if sub_pos == 'bottom' else 'order-2' }}">{{ title }}</h5>
+            <h6 class="card-subtitle text-body-secondary {{ 'order-2' if sub_pos == 'bottom' else 'order-1' }}">{{ subtitle }}</h6>
+        </div>
+    </div>
+{% endmacro %}
